@@ -1,0 +1,3 @@
+[submodule "src/usefull_facebook_at_work"]
+	path = src/usefull_facebook_at_work
+	url = https://github.com/HaiTo/usefull_facebook_at_work.git
