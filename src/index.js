@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 onload = function() {
   var webview = document.getElementById("mainWebview");
 
