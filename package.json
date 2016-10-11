@@ -1,0 +1,11 @@
+{
+  "name": "workplace-client",
+  "version": "0.1.0",
+  "description": "workplace client for Electron",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "node_modules/.bin/electron ."
+  },
+  "author": "yonda",
+  "license": "MIT"
+}
