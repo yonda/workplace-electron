@@ -5,6 +5,9 @@ var app = require('app');
 // ウィンドウを作成するモジュール
 var BrowserWindow = require('browser-window');
 
+// filesystem
+var fs = require('fs');
+
 // クラッシュレポート
 require('crash-reporter').start();
 
@@ -23,7 +26,6 @@ app.on('ready', function () {
   // ブラウザ(Chromium)の起動, 初期画面のロード
   mainWindow = new BrowserWindow({width: 1280, height: 800});
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
-  mainWindow.webContents.insertCSS(__dirname + '/usefull_facebook_at_work/style_for_webkit.css');
 
   // Application Menu を設定する
   setApplicationMenu();
