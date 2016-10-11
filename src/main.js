@@ -23,6 +23,7 @@ app.on('ready', function () {
   // ブラウザ(Chromium)の起動, 初期画面のロード
   mainWindow = new BrowserWindow({width: 1280, height: 800});
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
+  mainWindow.webContents.insertCSS(__dirname + '/usefull_facebook_at_work/style_for_webkit.css');
 
   // Application Menu を設定する
   setApplicationMenu();
@@ -54,6 +55,16 @@ function setApplicationMenu (){
             if (focusedWindow)
               focusedWindow.reload();
           }
+        },
+        {
+          label: 'Toggle Full Screen',
+          accelerator: 'Ctrl+Command+F',
+          click: function() { mainWindow.setFullScreen(!mainWindow.isFullScreen()); }
+        },
+        {
+          label: 'Toggle Developer Tools',
+          accelerator: 'Alt+Command+I',
+          click: function() { mainWindow.toggleDevTools(); }
         },
       ]
     },
